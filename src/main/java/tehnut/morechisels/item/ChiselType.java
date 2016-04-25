@@ -18,8 +18,7 @@ public enum ChiselType {
     THAUMIUM(durabilityThaumium), VOIDMETAL(durabilityVoidmetal), // Thaumcraft
     NEPTUNIUM(durabilityNeptunium), // Aquaculture
     INFINITY(0), // Avaritia
-    WALRUS(durabilityWalrus), // Extra Cells
-    CERTUSQUARTZ(durabilityCertusQuartz); // Applied Energistics
+    WALRUS(durabilityWalrus); // Extra Cells
 
     /**
      * Used for all types of durability (RF, EU, etc)
