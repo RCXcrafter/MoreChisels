@@ -14,7 +14,7 @@ import tehnut.morechisels.util.Utils;
 
 import java.awt.*;
 
-public class ItemChiselGem extends ItemChiselBase {
+public class ItemChiselIngot extends ItemChiselBase {
 
     private boolean setDisplayName;
     private String name;
@@ -22,7 +22,7 @@ public class ItemChiselGem extends ItemChiselBase {
 
     private IIcon overlayIcon;
 
-    public ItemChiselGem(String name, int durability, String hexColor, boolean setDisplayName) {
+    public ItemChiselIngot(String name, int durability, String hexColor, boolean setDisplayName) {
         super(name, durability);
 
         this.setDisplayName = setDisplayName;
@@ -30,8 +30,8 @@ public class ItemChiselGem extends ItemChiselBase {
         this.hexColor = hexColor;
         this.hasModes = true;
 
-        GameRegistry.registerItem(this, "ItemChiselGem" + name);
-        RecipeRegistry.addConfiguredChiselRecipe(this, "gem" + name, true);
+        GameRegistry.registerItem(this, "ItemChiselIngot" + name);
+        RecipeRegistry.addConfiguredChiselRecipe(this, "ingot" + name, true);
     }
 
     @SideOnly(Side.CLIENT)
@@ -47,9 +47,9 @@ public class ItemChiselGem extends ItemChiselBase {
         String materialUnloc = "material." + ModInformation.ID + "." + name.toLowerCase() + ".name";
 
         if (StatCollector.canTranslate(materialUnloc))
-            return StatCollector.translateToLocalFormatted("item.morechisels.chisel.gem.name", StatCollector.translateToLocal(materialUnloc));
+            return StatCollector.translateToLocalFormatted("item.morechisels.chisel.ingot.name", StatCollector.translateToLocal(materialUnloc));
         else
-            return Utils.splitAtCapital(StatCollector.translateToLocalFormatted("item.morechisels.chisel.gem.name", capName));
+            return Utils.splitAtCapital(StatCollector.translateToLocalFormatted("item.morechisels.chisel.ingot.name", capName));
     }
 
     @SideOnly(Side.CLIENT)
