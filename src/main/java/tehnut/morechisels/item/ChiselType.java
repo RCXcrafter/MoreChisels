@@ -17,8 +17,7 @@ public enum ChiselType {
     SOULIUM(durabilitySoulium), // Soul Shards: The Old Ways
     THAUMIUM(durabilityThaumium), VOIDMETAL(durabilityVoidmetal), // Thaumcraft
     NEPTUNIUM(durabilityNeptunium), // Aquaculture
-    INFINITY(0), // Avaritia
-    WALRUS(durabilityWalrus); // Extra Cells
+    INFINITY(0); // Avaritia
 
     /**
      * Used for all types of durability (RF, EU, etc)
