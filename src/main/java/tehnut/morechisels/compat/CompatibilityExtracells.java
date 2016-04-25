@@ -5,13 +5,14 @@ import tehnut.morechisels.registry.RecipeRegistry;
 import tehnut.morechisels.registry.ItemRegistry;
 import tehnut.morechisels.item.ChiselType;
 import tehnut.morechisels.item.ItemChiselBase;
+import tehnut.morechisels.item.chisel.ItemChiselVoidmetal;
 import tehnut.morechisels.util.LogHelper;
 
 import static tehnut.morechisels.ConfigHandler.*;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
-public class CompatibilityExtraCells {
+public class CompatibilityExtracells {
 
     public static Item chiselWalrus;
 
