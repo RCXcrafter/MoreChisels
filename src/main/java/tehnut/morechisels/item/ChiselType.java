@@ -21,8 +21,7 @@ public enum ChiselType {
     WALRUS(durabilityWalrus), // Extra Cells
     CERTUSQUARTZ(durabilityCertusQuartz), // Applied Energistics
     REINFORCEDMETAL(durabilityReinforcedMetal), GALGADORIANMETAL(durabilityGalgadorianMetal), // Steve's Carts
-    SYRMORITE(durabilitySyrmorite), OCTINE(durabilityOctine), VALONITE(durabilityValonite), // The Betweenlands
-    CARDBOARD(durabilityCardboard); // Better Storage
+    SYRMORITE(durabilitySyrmorite), OCTINE(durabilityOctine), VALONITE(durabilityValonite); // The Betweenlands
 
     /**
      * Used for all types of durability (RF, EU, etc)
