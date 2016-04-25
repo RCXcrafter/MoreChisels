@@ -52,8 +52,6 @@ public class MoreChisels {
         Utils.registerCompat(CompatibilitySoulShards.class, "SSTOW");
         Utils.registerCompat(CompatibilityThaumcraft.class, "Thaumcraft");
         Utils.registerCompat(CompatibilityTwilightForest.class, "TwilightForest");
-        Utils.registerCompat(CompatibilityAquaculture.class, "Aquaculture");
-        Utils.registerCompat(CompatibilityAvaritia.class, "Avaritia");
     }
 
     @Mod.EventHandler
