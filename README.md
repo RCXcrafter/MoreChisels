@@ -1,14 +1,16 @@
-#More Chisels [![Build Status](http://tehnut.info/jenkins/job/MoreChisels/badge/icon)](http://tehnut.info/jenkins/job/MoreChisels/)
+#More Chisels
 
 ![MoreChisels Icon](http://i.imgur.com/lY8Fev6.png)
 
-Assorted chisels for [Chisel-2](https://github.com/TheCricket/Chisel-2).
+Assorted chisels for [Chisel](https://github.com/Chisel-Team/Chisel).
 
 Builds `21` and on have switched to the [ChiselTeam](https://github.com/Chisel-Team/Chisel) fork of Chisel which can be found [here](http://minecraft.curseforge.com/mc-mods/235279-chisel).
 
 ##Downloads
 
-Downloads for MoreChisels (as well as all of my other mods) can be found on my [Jenkins](http://tehnut.info/jenkins/) or [CurseForge](http://minecraft.curseforge.com/mc-mods/227904-morechisels).
+Downloads for MoreChisels will be available on curseforge soon, in the meantime you can find the downloads [here](https://github.com/RCXcrafter/MoreChisels/releases).
+
+Previous versions of MoreChisels can be found on TehNuts [Jenkins](http://tehnut.info/jenkins/) or [CurseForge](http://minecraft.curseforge.com/mc-mods/227904-morechisels).
 
 ##Chisels done:
 
@@ -30,11 +32,11 @@ Downloads for MoreChisels (as well as all of my other mods) can be found on my [
 
 ##Chisels to come:
 
-* See [this](https://github.com/TehNut/MoreChisels/issues/3) issue.
+* See [this](https://github.com/RCXcrafter/MoreChisels/issues/3) issue.
 
 ## Want to suggest some chisel types?
 
-[Join my channel](https://webchat.esper.net/?channels=tehnut) (#TehNut) on [Espernet](https://www.esper.net/) and discuss there.
+See above issue.
 
 ##Dev setup
 
