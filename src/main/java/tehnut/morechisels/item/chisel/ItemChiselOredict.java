@@ -28,7 +28,7 @@ public class ItemChiselOredict extends ItemChiselBase {
         this.setDisplayName = setDisplayName;
         this.name = name;
         this.hexColor = hexColor;
-        this.hasModes = true;
+        this.hasModes = durability>=500;
 
         GameRegistry.registerItem(this, "ItemChiselOredict" + name);
         RecipeRegistry.addConfiguredChiselRecipe(this, name, true);
