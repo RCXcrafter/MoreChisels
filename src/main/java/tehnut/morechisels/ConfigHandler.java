@@ -47,7 +47,49 @@ public class ConfigHandler {
     public static boolean chiselValoniteEnabled;
     public static boolean chiselCardboardEnabled;
     public static String[] oredictChiselWhitelist;
-    private static String[] oredictChiselWhitelistDefaults = { "gemEmerald:700:#22ED4E", "gemLapis:200:#0000ff", "gemQuartz:250:#fff0f0", "gemRuby:700:#DD0707", "gemSapphire:700:#1F52F8", "gemAmethyst:2500:#FF00CE", "gemPeridot:700:#43A749", "gemTopaz:700:#f43E00", "gemTanzanite:700:#59008B", "gemMalachite:700:#26E5CD", "gemAmber:300:#FFCE00", "ingotGold:300:#FFCE00", "plankWood:300:#FFCE00", "cobblestone:300:#FFCE00" };
+    private static String[] oredictChiselWhitelistDefaults = {
+    		//vanilla
+    		"plankWood:60:#996A21",
+    		"cobblestone:132:#9A9A9A",
+    		"gemQuartz:101:#fff0f0",
+    		"gemLapis:200:#0000ff",
+    		"ingotGold:33:#EAEE57",
+    		"gemEmerald:700:#22ED4E",
+    		//thermal foundation
+    		"ingotElectrum:100:#F1ECDC",
+    		"ingotInvar:450:#E5F2D9",
+    		"ingotLead:150:#7F7F9C",
+    		"ingotNickel:300:#FFFFCC",
+    		//mekanism
+    		"ingotRefinedObsidian:2500:#4B00B8",
+    		"ingotOsmium:500:#8095A9",
+    		"ingotRefinedGlowstone:300:#BCC30D",
+    		//tinkers construct
+    		"ingotAlumite:500:#FFC1F5",
+    		"ingotCobalt:500:#4FAFFF",
+    		"ingotArdite:500:#FFC1F5",
+    		"ingotManyullyn:500:#B57CFF",
+    		//general oredict ingots
+    		"ingotCopper:175:#FF9A46",
+    		"ingotTin:200:#CEDBEA",
+    		"ingotBronze:500:#E8AB64",
+    		"ingotSilver:200:#F4F4F4",
+    		"ingotSteel:750:#E5E5E5",
+    		"ingotAluminum:200:#FFFFFF",
+    		"ingotBrass:275:#F5D853",
+    		"ingotMithril:2100:#CCFBFF",
+    		"ingotPlatinum:1700:#E6F4F7",
+    		//general oredict gems
+    		"gemRuby:700:#DD0707",
+    		"gemSapphire:700:#1F52F8",
+    		"gemAmethyst:2500:#FF00CE",
+    		"gemPeridot:700:#43A749",
+    		"gemTopaz:700:#f43E00",
+    		"gemTanzanite:700:#59008B",
+    		"gemMalachite:700:#26E5CD",
+    		"gemAmber:300:#FFCE00",
+    		"gemJade:700:#7DE0A0"
+    };
 
     public static int durabilityFluxed;
     public static int durabilityBloody;

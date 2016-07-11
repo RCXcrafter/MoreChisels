@@ -51,7 +51,7 @@ public class ItemChiselOredict extends ItemChiselBase {
         if (StatCollector.canTranslate(materialUnloc))
             return StatCollector.translateToLocalFormatted("item.morechisels.chisel.oredict.name", StatCollector.translateToLocal(materialUnloc));
         else
-            return Utils.splitAtCapital(StatCollector.translateToLocalFormatted("item.morechisels.chisel.oredict.name", capName)).substring(Utils.splitAtCapital(capName).lastIndexOf(" ") + 1);
+            return Utils.splitAtCapital(StatCollector.translateToLocalFormatted("item.morechisels.chisel.oredict.name", capName)).substring(Utils.splitAtCapital(capName).lastIndexOf(' ') + 1);
     }
 
     @SideOnly(Side.CLIENT)

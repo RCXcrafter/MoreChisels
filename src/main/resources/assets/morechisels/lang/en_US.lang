@@ -45,6 +45,9 @@ material.morechisels.gemperidot.name=Peridot
 material.morechisels.gemtopaz.name=Topaz
 material.morechisels.gemtanzanite.name=Tanzanite
 material.morechisels.gemamber.name=Amber
+material.morechisels.ingotgold.name=Golden
+material.morechisels.plankwood.name=Wooden
+material.morechisels.cobblestone.name=Stone
 
 # Tooltips
 tip.morechisels.pretty=Let's make all the pretty!

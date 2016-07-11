@@ -10,16 +10,14 @@ public class ItemRegistry {
     public static void registerItems() {
         // oredict
         for (String ore : OreDictionary.getOreNames()) {
-//            if (ore.startsWith("gem")) {
-                String oredict = ore.substring(0);
+        	String oredict = ore.substring(0);
 
-                for (String whitelist : ConfigHandler.oredictChiselWhitelist) {
-                    String[] splitWhitelist = whitelist.split(":");
+            for (String whitelist : ConfigHandler.oredictChiselWhitelist) {
+            	String[] splitWhitelist = whitelist.split(":");
 
-                    if (oredict.equals(splitWhitelist[0]))
-                        new ItemChiselOredict(splitWhitelist[0], Integer.parseInt(splitWhitelist[1]), splitWhitelist[2], true);
-                }
-//            }
+                if (oredict.equals(splitWhitelist[0]))
+                	new ItemChiselOredict(splitWhitelist[0], Integer.parseInt(splitWhitelist[1]), splitWhitelist[2], true);
+            }
         }
     }
 
