@@ -41,7 +41,7 @@ public class MoreChisels {
     public void init(FMLInitializationEvent event) {
         proxy.load();
 
-        ItemRegistry.registerItems();
+        //ItemRegistry.registerItems();
         RecipeRegistry.registerRecipes();
 
         Utils.registerCompat(CompatibilityAetherII.class, "aether");
@@ -59,10 +59,13 @@ public class MoreChisels {
         Utils.registerCompat(CompatibilityStevesCarts.class, "StevesCarts");
         Utils.registerCompat(CompatibilityBetweenlands.class, "thebetweenlands");
         Utils.registerCompat(CompatibilityBetterStorage.class, "betterstorage");
+        Utils.registerCompat(CompatibilityMineFactoryReloaded.class, "MineFactoryReloaded");
     }
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event) {
-
+    	
+        ItemRegistry.registerItems();
+        
     }
 }
