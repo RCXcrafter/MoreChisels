@@ -4,22 +4,22 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.Item;
 import net.minecraftforge.oredict.OreDictionary;
 import tehnut.morechisels.ConfigHandler;
-import tehnut.morechisels.item.chisel.ItemChiselGem;
+import tehnut.morechisels.item.chisel.ItemChiselOredict;
 
 public class ItemRegistry {
     public static void registerItems() {
-        // Gems
+        // oredict
         for (String ore : OreDictionary.getOreNames()) {
-            if (ore.startsWith("gem")) {
-                String gem = ore.substring(3);
+//            if (ore.startsWith("gem")) {
+                String oredict = ore.substring(0);
 
-                for (String whitelist : ConfigHandler.gemChiselWhitelist) {
+                for (String whitelist : ConfigHandler.oredictChiselWhitelist) {
                     String[] splitWhitelist = whitelist.split(":");
 
-                    if (gem.equals(splitWhitelist[0]))
-                        new ItemChiselGem(splitWhitelist[0], Integer.parseInt(splitWhitelist[1]), splitWhitelist[2], true);
+                    if (oredict.equals(splitWhitelist[0]))
+                        new ItemChiselOredict(splitWhitelist[0], Integer.parseInt(splitWhitelist[1]), splitWhitelist[2], true);
                 }
-            }
+//            }
         }
     }
 

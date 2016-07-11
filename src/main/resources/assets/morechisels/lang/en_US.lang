@@ -32,19 +32,19 @@ item.morechisels.chisel.syrmorite.name=Syrmorite Chisel
 item.morechisels.chisel.octine.name=Octine Chisel
 item.morechisels.chisel.valonite.name=Valonite Chisel
 item.morechisels.chisel.cardboard.name=Cardboard Chisel
-item.morechisels.chisel.gem.name=%s Chisel
+item.morechisels.chisel.oredict.name=%s Chisel
 
 # Materials
-material.morechisels.emerald.name=Emerald
-material.morechisels.quartz.name=Nether Quartz
-material.morechisels.lapis.name=Lapis Lazuli
-material.morechisels.sapphire.name=Sapphire
-material.morechisels.ruby.name=Ruby
-material.morechisels.amethyst.name=Amethyst
-material.morechisels.peridot.name=Peridot
-material.morechisels.topaz.name=Topaz
-material.morechisels.tanzanite.name=Tanzanite
-material.morechisels.amber.name=Amber
+material.morechisels.gememerald.name=Emerald
+material.morechisels.gemquartz.name=Nether Quartz
+material.morechisels.gemlapis.name=Lapis Lazuli
+material.morechisels.gemsapphire.name=Sapphire
+material.morechisels.gemruby.name=Ruby
+material.morechisels.gemamethyst.name=Amethyst
+material.morechisels.gemperidot.name=Peridot
+material.morechisels.gemtopaz.name=Topaz
+material.morechisels.gemtanzanite.name=Tanzanite
+material.morechisels.gemamber.name=Amber
 
 # Tooltips
 tip.morechisels.pretty=Let's make all the pretty!

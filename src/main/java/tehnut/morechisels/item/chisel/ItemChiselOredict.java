@@ -14,7 +14,7 @@ import tehnut.morechisels.util.Utils;
 
 import java.awt.*;
 
-public class ItemChiselGem extends ItemChiselBase {
+public class ItemChiselOredict extends ItemChiselBase {
 
     private boolean setDisplayName;
     private String name;
@@ -22,7 +22,7 @@ public class ItemChiselGem extends ItemChiselBase {
 
     private IIcon overlayIcon;
 
-    public ItemChiselGem(String name, int durability, String hexColor, boolean setDisplayName) {
+    public ItemChiselOredict(String name, int durability, String hexColor, boolean setDisplayName) {
         super(name, durability);
 
         this.setDisplayName = setDisplayName;
@@ -30,8 +30,8 @@ public class ItemChiselGem extends ItemChiselBase {
         this.hexColor = hexColor;
         this.hasModes = true;
 
-        GameRegistry.registerItem(this, "ItemChiselGem" + name);
-        RecipeRegistry.addConfiguredChiselRecipe(this, "gem" + name, true);
+        GameRegistry.registerItem(this, "ItemChiselOredict" + name);
+        RecipeRegistry.addConfiguredChiselRecipe(this, name, true);
     }
 
     @SideOnly(Side.CLIENT)
@@ -43,13 +43,13 @@ public class ItemChiselGem extends ItemChiselBase {
     @SideOnly(Side.CLIENT)
     @Override
     public String getItemStackDisplayName(ItemStack stack) {
-        String capName = Character.toUpperCase(name.charAt(0)) + name.substring(1);
+        String capName = Character.toUpperCase(name.charAt(0)) + name.substring(name.lastIndexOf(" ") + 1);
         String materialUnloc = "material." + ModInformation.ID + "." + name.toLowerCase() + ".name";
 
         if (StatCollector.canTranslate(materialUnloc))
-            return StatCollector.translateToLocalFormatted("item.morechisels.chisel.gem.name", StatCollector.translateToLocal(materialUnloc));
+            return StatCollector.translateToLocalFormatted("item.morechisels.chisel.oredict.name", StatCollector.translateToLocal(materialUnloc));
         else
-            return Utils.splitAtCapital(StatCollector.translateToLocalFormatted("item.morechisels.chisel.gem.name", capName));
+            return Utils.splitAtCapital(StatCollector.translateToLocalFormatted("item.morechisels.chisel.oredict.name", capName));
     }
 
     @SideOnly(Side.CLIENT)
