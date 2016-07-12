@@ -5,6 +5,7 @@ import com.cricketcraft.chisel.api.carving.ICarvingVariation;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
+import net.minecraft.client.resources.I18n;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -61,12 +62,20 @@ public class ItemChiselFluxed extends ItemChiselBase implements IEnergyContainer
     @SideOnly(Side.CLIENT)
     @SuppressWarnings("unchecked")
     public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4) {
+		String base = "item.chisel.chisel.desc.";
+		String gui = I18n.format(base + "gui");
+		String lc1 = I18n.format(base + "lc1");
+		String lc2 = I18n.format(base + "lc2");
+		String modes = I18n.format(base + "modes");
         NBTTagCompound tag = stack.stackTagCompound;
 
         if (tag == null)
             stack.setTagCompound(new NBTTagCompound());
 
         list.add(getEnergyColor(StatCollector.translateToLocalFormatted("tip.morechisels.energy", stack.stackTagCompound.getInteger("Energy"), getMaxEnergyStored(stack)), stack));
+		list.add(gui);
+		list.add(lc1);
+		list.add(lc2);
     }
 
     private static String getEnergyColor(String string, ItemStack stack) {

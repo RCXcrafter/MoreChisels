@@ -7,6 +7,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -92,6 +93,11 @@ public class ItemChiselBound extends ItemChiselBase implements IBindable {
     @SideOnly(Side.CLIENT)
     @SuppressWarnings("unchecked")
     public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4) {
+		String base = "item.chisel.chisel.desc.";
+		String gui = I18n.format(base + "gui");
+		String lc1 = I18n.format(base + "lc1");
+		String lc2 = I18n.format(base + "lc2");
+		String modes = I18n.format(base + "modes");
         list.add(StatCollector.translateToLocal("tip.morechisels.pretty"));
         if (stack.stackTagCompound != null) {
             if (stack.stackTagCompound.getBoolean("isActive"))
@@ -102,6 +108,11 @@ public class ItemChiselBound extends ItemChiselBase implements IBindable {
             if (!stack.stackTagCompound.getString("ownerName").equals(""))
                 list.add(StatCollector.translateToLocalFormatted("tip.morechisels.bound.owner", stack.stackTagCompound.getString("ownerName")));
         }
+		list.add(gui);
+		list.add(lc1);
+		list.add(lc2);
+		list.add("");
+		list.add(modes);
     }
 
     // Bound stuff
