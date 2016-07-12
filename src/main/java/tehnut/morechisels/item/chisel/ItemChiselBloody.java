@@ -8,6 +8,7 @@ import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 import tehnut.morechisels.ConfigHandler;
@@ -30,15 +31,21 @@ public class ItemChiselBloody extends ItemChiselBase implements IBindable {
     }
 
     @Override
-    public void onUpdate(ItemStack stack, World world, Entity player, int par4, boolean simulate) {
-        if (stack != null) {
-            if (stack.getItem() instanceof ItemChiselBloody && player instanceof EntityPlayer && !stack.stackTagCompound.getString("ownerName").equals("")) {
-                if (world.getTotalWorldTime() % 20 == 0 && stack.getItemDamage() < stack.getMaxDamage()) {
-                    SoulNetworkHandler.syphonAndDamageFromNetwork(stack, (EntityPlayer) player, ConfigHandler.lifeEssencePerRepair);
-                    stack.damageItem(-1, (EntityPlayer) player);
-                }
-            }
+    public void onUpdate(ItemStack stack, World world, Entity entity, int par4, boolean par5) {
+        if (!(entity instanceof EntityPlayer))
+            return;
+
+        EntityPlayer player = (EntityPlayer) entity;
+
+        if (stack.stackTagCompound == null)
+            stack.setTagCompound(new NBTTagCompound());
+
+        if (world.getWorldTime() % 20 == stack.stackTagCompound.getInteger("worldTimeDelay")) {
+            if (!player.capabilities.isCreativeMode)
+                SoulNetworkHandler.syphonAndDamageFromNetwork(stack, player, 20);
         }
+
+        stack.damageItem(-1, (EntityPlayer) player);
     }
 
     @Override

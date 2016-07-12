@@ -3,6 +3,7 @@ gui.morechisels.config.title=More Chisels Configuration
 
 # Items
 item.morechisels.chisel.bound.name=Bound Chisel
+item.morechisels.chisel.bloody.name=Bloody Chisel
 item.morechisels.chisel.fluxed.name=Fluxed Chisel
 item.morechisels.chisel.unstable.name=Unstable Chisel
 item.morechisels.chisel.bedrockium.name=Bedrockium Chisel
@@ -12,6 +13,7 @@ item.morechisels.chisel.knightmetal.name=Knightmetal Chisel
 item.morechisels.chisel.fiery.name=Fiery Chisel
 item.morechisels.chisel.manasteel.name=Manasteel Chisel
 item.morechisels.chisel.elementium.name=Elementium Chisel
+item.morechisels.chisel.terrasteel.name=Terrasteel Chisel
 item.morechisels.chisel.skyroot.name=Skyroot Chisel
 item.morechisels.chisel.holystone.name=Holystone Chisel
 item.morechisels.chisel.zanite.name=Zanite Chisel
