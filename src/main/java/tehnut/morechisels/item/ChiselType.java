@@ -22,7 +22,8 @@ public enum ChiselType {
     CERTUSQUARTZ(durabilityCertusQuartz), // Applied Energistics
     REINFORCEDMETAL(durabilityReinforcedMetal), GALGADORIANMETAL(durabilityGalgadorianMetal), // Steve's Carts
     SYRMORITE(durabilitySyrmorite), OCTINE(durabilityOctine), VALONITE(durabilityValonite), // The Betweenlands
-    CARDBOARD(durabilityCardboard); // Better Storage
+    CARDBOARD(durabilityCardboard), // Better Storage
+    PRECISION(durabilityPrecision); // Minefactory Reloaded
 
     /**
      * Used for all types of durability (RF, EU, etc)
