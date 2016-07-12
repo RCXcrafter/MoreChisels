@@ -59,7 +59,7 @@ public class MoreChisels {
         Utils.registerCompat(CompatibilityStevesCarts.class, "StevesCarts");
         Utils.registerCompat(CompatibilityBetweenlands.class, "thebetweenlands");
         Utils.registerCompat(CompatibilityBetterStorage.class, "betterstorage");
-        Utils.registerCompat(CompatibilityMineFactoryReloaded.class, "MineFactoryReloaded");
+        //Utils.registerCompat(CompatibilityMineFactoryReloaded.class, "MineFactoryReloaded");
     }
 
     @Mod.EventHandler
