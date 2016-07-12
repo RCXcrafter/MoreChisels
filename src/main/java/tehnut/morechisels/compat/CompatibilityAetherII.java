@@ -40,14 +40,15 @@ public class CompatibilityAetherII {
     }
 
     private static void registerRecipes() {
-        Block skyroot = GameRegistry.findBlock("aether", "skyrootPlank");
-        Block holystone = GameRegistry.findBlock("aether", "holystone");
+        Item skyrootStick = GameRegistry.findItem("aether", "skyrootStick");
+        Item skyroot = GameRegistry.findItem("aether", "skyrootPlank");
+        Item holystone = GameRegistry.findItem("aether", "holystone");
         Item zanite = GameRegistry.findItem("aether", "zaniteGemstone");
-        Block gravitite = GameRegistry.findBlock("aether", "enchantedGravitite");
+        Item gravitite = GameRegistry.findItem("aether", "enchantedGravitite");
 
-        RecipeRegistry.addConfiguredChiselRecipe(chiselSkyroot, skyroot, chiselSkyrootEnabled);
-        RecipeRegistry.addConfiguredChiselRecipe(chiselHolystone, holystone, chiselHolystoneEnabled);
-        RecipeRegistry.addConfiguredChiselRecipe(chiselZanite, zanite, chiselZaniteEnabled);
-        RecipeRegistry.addConfiguredChiselRecipe(chiselGravitite, gravitite, chiselGravititeEnabled);
+        RecipeRegistry.addThemedChiselRecipe(chiselSkyroot, skyroot, skyrootStick, chiselSkyrootEnabled);
+        RecipeRegistry.addThemedChiselRecipe(chiselHolystone, holystone, skyrootStick, chiselHolystoneEnabled);
+        RecipeRegistry.addThemedChiselRecipe(chiselZanite, zanite, skyrootStick, chiselZaniteEnabled);
+        RecipeRegistry.addThemedChiselRecipe(chiselGravitite, gravitite, skyrootStick, chiselGravititeEnabled);
     }
 }
