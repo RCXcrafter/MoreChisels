@@ -27,11 +27,6 @@ public class ItemChiselBedrockium extends ItemChiselBase {
     public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean bool) {
         list.add(EnumChatFormatting.DARK_PURPLE + StatCollector.translateToLocal("tip.morechisels.unbreakable"));
     }
-    
-    @Override
-    public boolean onChisel(World world, ItemStack chisel, ICarvingVariation target) {
-        return false;
-    }
 
     @Override
     public boolean hasModes(ItemStack chisel) {
