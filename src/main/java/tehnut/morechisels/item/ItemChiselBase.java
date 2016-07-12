@@ -21,7 +21,7 @@ import tehnut.morechisels.ModInformation;
 
 public class ItemChiselBase extends Item implements IChiselItem {
 
-    private ChiselType type;
+	private ChiselType type;
     protected boolean hasModes = false;
     protected boolean canChiselBlock = true;
     protected int attackDamage = 2;
@@ -39,6 +39,8 @@ public class ItemChiselBase extends Item implements IChiselItem {
         setCreativeTab(ChiselTabs.tabChisel);
         setMaxStackSize(1);
         setMaxDamage(durability);
+        this.hasModes = durability>=500;
+        this.canChiselBlock = durability>=50;
     }
 
     /**

@@ -23,13 +23,13 @@ public class CompatibilityBotania {
 
     private static void registerItems() {
 
-        chiselManasteel = new ItemChiselMana(ChiselType.MANASTEEL, durabilityManasteel);
+        chiselManasteel = new ItemChiselMana(ChiselType.MANASTEEL);
         ItemRegistry.registerCompatItem(chiselManasteel, "ItemChiselManasteel", chiselManasteelEnabled);
 
-        chiselElementium = new ItemChiselMana(ChiselType.ELEMENTIUM, durabilityElementium);
+        chiselElementium = new ItemChiselMana(ChiselType.ELEMENTIUM);
         ItemRegistry.registerCompatItem(chiselElementium, "ItemChiselElementium", chiselElementiumEnabled);
 
-        chiselTerrasteel = new ItemChiselMana(ChiselType.TERRASTEEL, durabilityTerrasteel);
+        chiselTerrasteel = new ItemChiselMana(ChiselType.TERRASTEEL);
         ItemRegistry.registerCompatItem(chiselTerrasteel, "ItemChiselTerrasteel", chiselTerrasteelEnabled);
     }
 

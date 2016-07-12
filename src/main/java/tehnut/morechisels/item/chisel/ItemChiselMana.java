@@ -13,10 +13,8 @@ public class ItemChiselMana extends ItemChiselBase implements IManaUsingItem {
 
 	private static final int MANA_PER_DAMAGE = 30;
 	
-    public ItemChiselMana(ChiselType type, int durability) {
+    public ItemChiselMana(ChiselType type) {
         super(type);
-
-        this.hasModes = durability>=500;
     }
 
     @Override

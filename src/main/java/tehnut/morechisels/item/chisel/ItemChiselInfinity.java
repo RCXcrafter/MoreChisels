@@ -14,6 +14,7 @@ public class ItemChiselInfinity extends ItemChiselBase {
         super(ChiselType.INFINITY);
 
         this.hasModes = true;
+        this.canChiselBlock = true;
         this.attackDamage = 8;
     }
 
