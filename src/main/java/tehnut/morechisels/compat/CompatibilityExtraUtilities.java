@@ -38,6 +38,6 @@ public class CompatibilityExtraUtilities {
 
         RecipeRegistry.addThemedChiselRecipe(chiselBedrockium, bedrockiumIngot, "ingotUnstable", chiselBedrockiumEnabled);
         if (chiselUnstableEnabled && bedrockiumIngot != null)
-            GameRegistry.addRecipe(new ShapedOreRecipe(chiselUnstable, "I", "O", 'I', "ingotUnstable", 'O', Blocks.obsidian));
+            GameRegistry.addRecipe(new ShapedOreRecipe(chiselUnstable, "I", "O", 'I', "ingotUnstable", 'O', "blockObsidian"));
     }
 }

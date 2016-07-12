@@ -13,6 +13,7 @@ public class CompatibilityBotania {
 
     public static Item chiselManasteel;
     public static Item chiselElementium;
+    public static Item chiselTerrasteel;
 
     static {
         LogHelper.info("Botania compatibility is enabled and running");
@@ -22,16 +23,21 @@ public class CompatibilityBotania {
 
     private static void registerItems() {
 
-        chiselManasteel = new ItemChiselMana(ChiselType.MANASTEEL);
+        chiselManasteel = new ItemChiselMana(ChiselType.MANASTEEL, durabilityManasteel);
         ItemRegistry.registerCompatItem(chiselManasteel, "ItemChiselManasteel", chiselManasteelEnabled);
 
-        chiselElementium = new ItemChiselMana(ChiselType.ELEMENTIUM);
+        chiselElementium = new ItemChiselMana(ChiselType.ELEMENTIUM, durabilityElementium);
         ItemRegistry.registerCompatItem(chiselElementium, "ItemChiselElementium", chiselElementiumEnabled);
+
+        chiselTerrasteel = new ItemChiselMana(ChiselType.TERRASTEEL, durabilityTerrasteel);
+        ItemRegistry.registerCompatItem(chiselTerrasteel, "ItemChiselTerrasteel", chiselTerrasteelEnabled);
     }
 
     private static void registerRecipes() {
 
-        RecipeRegistry.addConfiguredChiselRecipe(chiselManasteel, "ingotManasteel", chiselManasteelEnabled);
-        RecipeRegistry.addConfiguredChiselRecipe(chiselElementium, "ingotElvenElementium", chiselElementiumEnabled);
+        RecipeRegistry.addThemedChiselRecipe(chiselManasteel, "ingotManasteel", "livingwoodTwig", chiselManasteelEnabled);
+        RecipeRegistry.addThemedChiselRecipe(chiselElementium, "ingotElvenElementium", "dreamwoodTwig", chiselElementiumEnabled);
+        RecipeRegistry.addThemedChiselRecipe(chiselTerrasteel, "ingotTerrasteel", "livingwoodTwig", chiselTerrasteelEnabled);
+
     }
 }

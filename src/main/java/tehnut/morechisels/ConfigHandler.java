@@ -25,8 +25,9 @@ public class ConfigHandler {
     public static boolean chiselSteeleafEnabled;
     public static boolean chiselKnightmetalEnabled;
     public static boolean chiselFieryEnabled;
-    public static boolean chiselManasteelEnabled = false;
-    public static boolean chiselElementiumEnabled = false;
+    public static boolean chiselManasteelEnabled;
+    public static boolean chiselElementiumEnabled;
+    public static boolean chiselTerrasteelEnabled;
     public static boolean chiselSkyrootEnabled;
     public static boolean chiselHolystoneEnabled;
     public static boolean chiselZaniteEnabled;
@@ -93,7 +94,6 @@ public class ConfigHandler {
     };
 
     public static int durabilityFluxed;
-    public static int durabilityBloody;
     public static int durabilityUnstable;
     public static int durabilityIronwood;
     public static int durabilitySteeleaf;
@@ -101,6 +101,7 @@ public class ConfigHandler {
     public static int durabilityFiery;
     public static int durabilityManasteel;
     public static int durabilityElementium;
+    public static int durabilityTerrasteel;
     public static int durabilitySkyroot;
     public static int durabilityHolystone;
     public static int durabilityZanite;
@@ -144,12 +145,16 @@ public class ConfigHandler {
         // CHISELS
         chiselFluxedEnabled = config.getBoolean("chiselFluxedEnabled", chisels, true, "");
         chiselBoundEnabled = config.getBoolean("chiselBoundEnabled", chisels, true, "");
+        chiselBloodyEnabled = config.getBoolean("chiselBloodyEnabled", chisels, true, "");
         chiselBedrockiumEnabled = config.getBoolean("chiselBedrockiumEnabled", chisels, true, "");
         chiselUnstableEnabled = config.getBoolean("chiselUnstableEnabled", chisels, true, "");
         chiselIronwoodEnabled = config.getBoolean("chiselIronwoodEnabled", chisels, true, "");
         chiselSteeleafEnabled = config.getBoolean("chiselSteeleafEnabled", chisels, true, "");
         chiselKnightmetalEnabled = config.getBoolean("chiselKnightmetalEnabled", chisels, true, "");
         chiselFieryEnabled = config.getBoolean("chiselFieryEnabled", chisels, true, "");
+        chiselManasteelEnabled = config.getBoolean("chiselManasteelEnabled", chisels, true, "");
+        chiselElementiumEnabled = config.getBoolean("chiselElementiumEnabled", chisels, true, "");
+        chiselTerrasteelEnabled = config.getBoolean("chiselTerrasteelEnabled", chisels, true, "");
         chiselSkyrootEnabled = config.getBoolean("chiselSkyrootEnabled", chisels, true, "");
         chiselHolystoneEnabled = config.getBoolean("chiselHolystoneEnabled", chisels, true, "");
         chiselZaniteEnabled = config.getBoolean("chiselZaniteEnabled", chisels, true, "");
@@ -181,6 +186,7 @@ public class ConfigHandler {
         durabilityFiery = config.getInt("durabilityFiery", durability, 1300, 0, Short.MAX_VALUE, "");
         durabilityManasteel = config.getInt("durabilityManasteel", durability, 300, 0, Short.MAX_VALUE, "");
         durabilityElementium = config.getInt("durabilityElementium", durability, 720, 0, Short.MAX_VALUE, "");
+        durabilityTerrasteel = config.getInt("durabilityTerrasteel", durability, 2300, 0, Short.MAX_VALUE, "");
         durabilitySkyroot = config.getInt("durabilitySkyroot", durability, 60, 0, Short.MAX_VALUE, "");
         durabilityHolystone = config.getInt("durabilityHolystone", durability, 130, 0, Short.MAX_VALUE, "");
         durabilityZanite = config.getInt("durabilityZanite", durability, 720, 0, Short.MAX_VALUE, "");
