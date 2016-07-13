@@ -8,9 +8,7 @@ import tehnut.morechisels.registry.RecipeRegistry;
 import tehnut.morechisels.registry.ItemRegistry;
 import tehnut.morechisels.item.ChiselType;
 import tehnut.morechisels.item.ItemChiselBase;
-import tehnut.morechisels.item.chisel.ItemChiselSyrmorite;
-import tehnut.morechisels.item.chisel.ItemChiselOctine;
-import tehnut.morechisels.item.chisel.ItemChiselValonite;
+import tehnut.morechisels.item.chisel.ItemChiselCorrodible;
 import tehnut.morechisels.util.LogHelper;
 
 import static tehnut.morechisels.ConfigHandler.*;
@@ -30,13 +28,13 @@ public class CompatibilityBetweenlands {
     }
 
     private static void registerItems() {
-        chiselSyrmorite =  new ItemChiselSyrmorite();
+        chiselSyrmorite =  new ItemChiselCorrodible(ChiselType.SYRMORITE);
         ItemRegistry.registerCompatItem(chiselSyrmorite, "ItemChiselSyrmorite", chiselSyrmoriteEnabled);
 
-        chiselOctine =  new ItemChiselOctine();
+        chiselOctine =  new ItemChiselCorrodible(ChiselType.OCTINE);
         ItemRegistry.registerCompatItem(chiselOctine, "ItemChiselOctine", chiselOctineEnabled);
 
-        chiselValonite =  new ItemChiselValonite();
+        chiselValonite =  new ItemChiselCorrodible(ChiselType.VALONITE);
         ItemRegistry.registerCompatItem(chiselValonite, "ItemChiselValonite", chiselValoniteEnabled);
     }
 
