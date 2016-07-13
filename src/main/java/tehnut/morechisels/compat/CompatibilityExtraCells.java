@@ -4,7 +4,7 @@ import net.minecraft.item.Item;
 import tehnut.morechisels.registry.RecipeRegistry;
 import tehnut.morechisels.registry.ItemRegistry;
 import tehnut.morechisels.item.ChiselType;
-import tehnut.morechisels.item.ItemChiselBase;
+import tehnut.morechisels.item.chisel.ItemChiselWalrus;
 import tehnut.morechisels.util.LogHelper;
 
 import static tehnut.morechisels.ConfigHandler.*;
@@ -22,7 +22,7 @@ public class CompatibilityExtraCells {
     }
 
     private static void registerItems() {
-        chiselWalrus = new ItemChiselBase(ChiselType.WALRUS);
+        chiselWalrus = new ItemChiselWalrus();
         ItemRegistry.registerCompatItem(chiselWalrus, "ItemChiselWalrus", chiselWalrusEnabled);
     }
 
