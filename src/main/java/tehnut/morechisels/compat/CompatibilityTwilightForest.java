@@ -5,6 +5,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import tehnut.morechisels.item.ChiselType;
 import tehnut.morechisels.item.ItemChiselBase;
+import tehnut.morechisels.item.chisel.ItemChiselFire;
 import tehnut.morechisels.registry.RecipeRegistry;
 import tehnut.morechisels.registry.ItemRegistry;
 import tehnut.morechisels.util.LogHelper;
@@ -34,7 +35,7 @@ public class CompatibilityTwilightForest {
         chiselKnightmetal = new ItemChiselBase(ChiselType.KNIGHTMETAL);
         ItemRegistry.registerCompatItem(chiselKnightmetal, "ItemChiselKnightmetal", chiselKnightmetalEnabled);
 
-        chiselFiery = new ItemChiselBase(ChiselType.FIERY);
+        chiselFiery = new ItemChiselFire(ChiselType.FIERY);
         ItemRegistry.registerCompatItem(chiselFiery, "ItemChiselFiery", chiselFieryEnabled);
     }
 
