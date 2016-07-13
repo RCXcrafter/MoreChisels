@@ -23,7 +23,8 @@ public enum ChiselType {
     REINFORCEDMETAL(durabilityReinforcedMetal), GALGADORIANMETAL(durabilityGalgadorianMetal), // Steve's Carts
     SYRMORITE(durabilitySyrmorite), OCTINE(durabilityOctine), VALONITE(durabilityValonite), // The Betweenlands
     CARDBOARD(durabilityCardboard), // Better Storage
-    PRECISION(durabilityPrecision); // Minefactory Reloaded
+    PRECISION(durabilityPrecision), // Minefactory Reloaded
+    SOAP(durabilitySoap); // MrCrayfish' Furniture Mod
 
     /**
      * Used for all types of durability (RF, EU, etc)
