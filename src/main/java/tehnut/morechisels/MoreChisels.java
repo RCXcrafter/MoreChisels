@@ -1,6 +1,7 @@
 package tehnut.morechisels;
 
 import cpw.mods.fml.common.FMLCommonHandler;
+import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -12,6 +13,7 @@ import tehnut.morechisels.registry.RecipeRegistry;
 import tehnut.morechisels.registry.ItemRegistry;
 import tehnut.morechisels.proxy.CommonProxy;
 import tehnut.morechisels.util.EventHandler;
+import tehnut.morechisels.util.LogHelper;
 import tehnut.morechisels.util.Utils;
 
 import java.io.File;
@@ -60,6 +62,14 @@ public class MoreChisels {
         Utils.registerCompat(CompatibilityBetweenlands.class, "thebetweenlands");
         Utils.registerCompat(CompatibilityBetterStorage.class, "betterstorage");
         //Utils.registerCompat(CompatibilityMineFactoryReloaded.class, "MineFactoryReloaded");
+        try {
+        	 Class.forName( "cofh.api.package-info" );
+             try {
+             	Class.forName(CompatibilityRedstoneFlux.class.getCanonicalName());
+             } catch (ClassNotFoundException e1) {
+             	LogHelper.error("Could not find compatibility class for Redstone Flux.  Please report this.");
+             }
+        } catch( ClassNotFoundException e0 ) {}
     }
 
     @Mod.EventHandler
