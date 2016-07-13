@@ -35,8 +35,14 @@ public class ItemChiselOredict extends ItemChiselBase {
 
     @SideOnly(Side.CLIENT)
     public void registerIcons(IIconRegister iconRegister) {
-        this.itemIcon = iconRegister.registerIcon(ModInformation.TEXLOC + "chisel_base");
-        this.overlayIcon = iconRegister.registerIcon(ModInformation.TEXLOC + "chisel_overlay");
+    	//if (iconRegister.registerIcon(ModInformation.TEXLOC + "chisel_" + name.toLowerCase()) != null){
+    	//	this.itemIcon = iconRegister.registerIcon(ModInformation.TEXLOC + "chisel_" + name.toLowerCase());
+    	//	this.overlayIcon = iconRegister.registerIcon(ModInformation.TEXLOC + "void");
+    	//}
+    	//else{
+    		this.itemIcon = iconRegister.registerIcon(ModInformation.TEXLOC + "chisel_base");
+    		this.overlayIcon = iconRegister.registerIcon(ModInformation.TEXLOC + "chisel_overlay");
+    	//}
     }
 
     @SideOnly(Side.CLIENT)
