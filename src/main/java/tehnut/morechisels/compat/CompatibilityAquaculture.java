@@ -6,7 +6,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import tehnut.morechisels.item.ChiselType;
 import tehnut.morechisels.item.ItemChiselBase;
-import tehnut.morechisels.item.chisel.ItemChiselNeptunium;
 import tehnut.morechisels.registry.RecipeRegistry;
 import tehnut.morechisels.registry.ItemRegistry;
 import tehnut.morechisels.util.LogHelper;
@@ -24,7 +23,7 @@ public class CompatibilityAquaculture {
     }
 
     private static void registerItems() {
-        chiselNeptunium =  new ItemChiselNeptunium();
+        chiselNeptunium =  new ItemChiselBase(ChiselType.NEPTUNIUM);
         ItemRegistry.registerCompatItem(chiselNeptunium, "ItemChiselNeptunium", chiselNeptuniumEnabled);
     }
 

@@ -7,8 +7,6 @@ import tehnut.morechisels.registry.RecipeRegistry;
 import tehnut.morechisels.registry.ItemRegistry;
 import tehnut.morechisels.item.ChiselType;
 import tehnut.morechisels.item.ItemChiselBase;
-import tehnut.morechisels.item.chisel.ItemChiselReinforcedMetal;
-import tehnut.morechisels.item.chisel.ItemChiselGalgadorianMetal;
 import tehnut.morechisels.util.LogHelper;
 
 import static tehnut.morechisels.ConfigHandler.*;
@@ -27,10 +25,10 @@ public class CompatibilityStevesCarts {
     }
 
     private static void registerItems() {
-        chiselReinforcedMetal =  new ItemChiselReinforcedMetal();
+        chiselReinforcedMetal =  new ItemChiselBase(ChiselType.REINFORCEDMETAL);
         ItemRegistry.registerCompatItem(chiselReinforcedMetal, "ItemChiselReinforcedMetal", chiselReinforcedMetalEnabled);
 
-        chiselGalgadorianMetal =  new ItemChiselGalgadorianMetal();
+        chiselGalgadorianMetal =  new ItemChiselBase(ChiselType.GALGADORIANMETAL);
         ItemRegistry.registerCompatItem(chiselGalgadorianMetal, "ItemChiselGalgadorianMetal", chiselGalgadorianMetalEnabled);
     }
 
