@@ -41,6 +41,7 @@ public class ConfigHandler {
     public static boolean chiselInfinityEnabled;
     public static boolean chiselWalrusEnabled;
     public static boolean chiselCertusQuartzEnabled;
+    public static boolean chiselAEEnabled;
     public static boolean chiselReinforcedMetalEnabled;
     public static boolean chiselGalgadorianMetalEnabled;
     public static boolean chiselSyrmoriteEnabled;
@@ -115,6 +116,7 @@ public class ConfigHandler {
     public static int durabilityNeptunium;
     public static int durabilityWalrus;
     public static int durabilityCertusQuartz;
+    public static int durabilityAE;
     public static int durabilityReinforcedMetal;
     public static int durabilityGalgadorianMetal;
     public static int durabilitySyrmorite;
@@ -170,6 +172,7 @@ public class ConfigHandler {
         chiselInfinityEnabled = config.getBoolean("chiselInfinityEnabled", chisels, true, "");
         chiselWalrusEnabled = config.getBoolean("chiselWalrusEnabled", chisels, true, "");
         chiselCertusQuartzEnabled = config.getBoolean("chiselCertusQuartzEnabled", chisels, true, "");
+        //chiselAEEnabled = config.getBoolean("chiselAEEnabled", chisels, true, "");
         chiselReinforcedMetalEnabled = config.getBoolean("chiselReinforcedMetalEnabled", chisels, true, "");
         chiselGalgadorianMetalEnabled = config.getBoolean("chiselGalgadorianMetalEnabled", chisels, true, "");
         chiselSyrmoriteEnabled = config.getBoolean("chiselSyrmoriteEnabled", chisels, true, "");
@@ -202,6 +205,7 @@ public class ConfigHandler {
         durabilityNeptunium = config.getInt("durabilityNeptunium", durability, 2500, 0, Short.MAX_VALUE, "");
         durabilityWalrus = config.getInt("durabilityWalrus", durability, 42, 0, Short.MAX_VALUE, "");
         durabilityCertusQuartz = config.getInt("durabilityCertusQuartz", durability, 250, 0, Short.MAX_VALUE, "");
+        //durabilityAE = config.getInt("durabilityAE", durability, 2000, 0, Short.MAX_VALUE, "");
         durabilityReinforcedMetal = config.getInt("durabilityReinforcedMetal", durability, 10000, 0, Short.MAX_VALUE, "");
         durabilityGalgadorianMetal = config.getInt("durabilityGalgadorianMetal", durability, 1000000, 0, Short.MAX_VALUE, "");
         durabilitySyrmorite = config.getInt("durabilitySyrmorite", durability, 200, 0, Short.MAX_VALUE, "");

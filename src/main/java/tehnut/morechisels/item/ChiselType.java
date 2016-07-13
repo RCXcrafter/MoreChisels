@@ -19,7 +19,7 @@ public enum ChiselType {
     NEPTUNIUM(durabilityNeptunium), // Aquaculture
     INFINITY(0), // Avaritia
     WALRUS(durabilityWalrus), // Extra Cells
-    CERTUSQUARTZ(durabilityCertusQuartz), // Applied Energistics
+    CERTUSQUARTZ(durabilityCertusQuartz), AE(durabilityAE), // Applied Energistics
     REINFORCEDMETAL(durabilityReinforcedMetal), GALGADORIANMETAL(durabilityGalgadorianMetal), // Steve's Carts
     SYRMORITE(durabilitySyrmorite), OCTINE(durabilityOctine), VALONITE(durabilityValonite), // The Betweenlands
     CARDBOARD(durabilityCardboard), // Better Storage

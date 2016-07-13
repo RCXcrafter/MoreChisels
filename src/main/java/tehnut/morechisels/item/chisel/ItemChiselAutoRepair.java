@@ -16,7 +16,7 @@ public class ItemChiselAutoRepair extends ItemChiselBase {
     
     @Override
 	public void onUpdate(ItemStack stack, World world, Entity player, int par4, boolean par5) {
-		if(!world.isRemote && stack.getItemDamage() > 0 && world.getWorldTime() % 500 == stack.stackTagCompound.getInteger("worldTimeDelay"))
+		if(!world.isRemote && stack.getItemDamage() > 0 && world.getWorldTime() % 300 == stack.stackTagCompound.getInteger("worldTimeDelay"))
 			stack.setItemDamage(stack.getItemDamage() - 1);
     }
 }
