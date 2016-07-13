@@ -174,7 +174,7 @@ public class ConfigHandler {
         chiselOctineEnabled = config.getBoolean("chiselOctineEnabled", chisels, true, "");
         chiselValoniteEnabled = config.getBoolean("chiselValoniteEnabled", chisels, true, "");
         chiselCardboardEnabled = config.getBoolean("chiselCardboardEnabled", chisels, true, "");
-        chiselPrecisionEnabled = config.getBoolean("chiselPrecisionEnabled", chisels, true, "");
+        //chiselPrecisionEnabled = config.getBoolean("chiselPrecisionEnabled", chisels, true, "");
         oredictChiselWhitelist = config.getStringList("oredictChiselWhitelist", chisels, oredictChiselWhitelistDefaults, "Whitelist for chisels created by Oredict entries. Add the OreDict name.\nSyntax is:\nOredictName:Durability:HexColor");
 
         // DURABILITY
@@ -205,7 +205,7 @@ public class ConfigHandler {
         durabilityOctine = config.getInt("durabilityOctine", durability, 900, 0, Short.MAX_VALUE, "");
         durabilityValonite = config.getInt("durabilityValonite", durability, 2500, 0, Short.MAX_VALUE, "");
         durabilityCardboard = config.getInt("durabilityCardboard", durability, 64, 0, Short.MAX_VALUE, "");
-        durabilityPrecision = config.getInt("durabilityPrecision", durability, 64, 0, Short.MAX_VALUE, "");
+        //durabilityPrecision = config.getInt("durabilityPrecision", durability, 64, 0, Short.MAX_VALUE, "");
 
         enableLogging = config.getBoolean("enableLogging", misc, true, "Allows MoreChisels to log things to console. This must be enabled when submitting a log for support.");
         addCoolStuffForCoolPeople = config.getBoolean("addCoolStuffForCoolPeople", misc, true, "Disable this if you don't like cool people.");

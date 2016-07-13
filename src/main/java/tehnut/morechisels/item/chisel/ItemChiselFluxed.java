@@ -76,6 +76,8 @@ public class ItemChiselFluxed extends ItemChiselBase implements IEnergyContainer
 		list.add(gui);
 		list.add(lc1);
 		list.add(lc2);
+		list.add("");
+		list.add(modes);
     }
 
     private static String getEnergyColor(String string, ItemStack stack) {
