@@ -38,6 +38,7 @@ item.morechisels.chisel.cardboard.name=Cardboard Chisel
 item.morechisels.chisel.precision.name=Precision Chisel
 item.morechisels.chisel.soap.name=Soap Chisel
 item.morechisels.chisel.pneumatic.name=Pneumatic Chisel
+item.morechisels.chisel.darksteel.name=Dark Chisel
 item.morechisels.chisel.oredict.name=%s Chisel
 
 # Materials
