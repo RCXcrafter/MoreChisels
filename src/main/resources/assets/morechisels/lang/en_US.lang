@@ -13,7 +13,7 @@ item.morechisels.chisel.knightmetal.name=Knightmetal Chisel
 item.morechisels.chisel.fiery.name=Fiery Chisel
 item.morechisels.chisel.manasteel.name=Manasteel Chisel
 item.morechisels.chisel.elementium.name=Elementium Chisel
-item.morechisels.chisel.terrasteel.name=Terrasteel Chisel
+item.morechisels.chisel.terrasteel.name=Terra Chisel
 item.morechisels.chisel.skyroot.name=Skyroot Chisel
 item.morechisels.chisel.holystone.name=Holystone Chisel
 item.morechisels.chisel.zanite.name=Zanite Chisel
@@ -37,6 +37,7 @@ item.morechisels.chisel.valonite.name=Valonite Chisel
 item.morechisels.chisel.cardboard.name=Cardboard Chisel
 item.morechisels.chisel.precision.name=Precision Chisel
 item.morechisels.chisel.soap.name=Soap Chisel
+item.morechisels.chisel.pneumatic.name=Pneumatic Chisel
 item.morechisels.chisel.oredict.name=%s Chisel
 
 # Materials

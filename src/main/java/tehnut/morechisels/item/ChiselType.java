@@ -24,7 +24,8 @@ public enum ChiselType {
     SYRMORITE(durabilitySyrmorite), OCTINE(durabilityOctine), VALONITE(durabilityValonite), // The Betweenlands
     CARDBOARD(durabilityCardboard), // Better Storage
     PRECISION(durabilityPrecision), // Minefactory Reloaded
-    SOAP(durabilitySoap); // MrCrayfish' Furniture Mod
+    SOAP(durabilitySoap), // MrCrayfish' Furniture Mod
+    PNEUMATIC(durabilityPneumatic); // MrCrayfish' Furniture Mod
 
     /**
      * Used for all types of durability (RF, EU, etc)

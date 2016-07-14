@@ -63,6 +63,7 @@ public class MoreChisels {
         Utils.registerCompat(CompatibilityBetterStorage.class, "betterstorage");
         //Utils.registerCompat(CompatibilityMineFactoryReloaded.class, "MineFactoryReloaded");
         Utils.registerCompat(CompatibilityCrayfishFurniture.class, "cfm");
+        Utils.registerCompat(CompatibilityPneumatiCraft.class, "PneumaticCraft");
         try {
         	 Class.forName( "cofh.api.package-info" );
              try {
