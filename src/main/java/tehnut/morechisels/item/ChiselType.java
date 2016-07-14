@@ -25,7 +25,8 @@ public enum ChiselType {
     CARDBOARD(durabilityCardboard), // Better Storage
     PRECISION(durabilityPrecision), // Minefactory Reloaded
     SOAP(durabilitySoap), // MrCrayfish' Furniture Mod
-    PNEUMATIC(durabilityPneumatic); // MrCrayfish' Furniture Mod
+    PNEUMATIC(durabilityPneumatic), // PneumaticCraft
+    ELECTRIC(durabilityElectric); // IC2
 
     /**
      * Used for all types of durability (RF, EU, etc)
