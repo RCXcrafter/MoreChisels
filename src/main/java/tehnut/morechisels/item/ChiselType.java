@@ -26,7 +26,8 @@ public enum ChiselType {
     PRECISION(durabilityPrecision), // Minefactory Reloaded
     SOAP(durabilitySoap), // MrCrayfish' Furniture Mod
     PNEUMATIC(durabilityPneumatic), // PneumaticCraft
-    ELECTRIC(durabilityElectric); // IC2
+    ELECTRIC(durabilityElectric), // IC2
+    DARKSTEEL(durabilityDarksteel); // Ender IO
 
     /**
      * Used for all types of durability (RF, EU, etc)

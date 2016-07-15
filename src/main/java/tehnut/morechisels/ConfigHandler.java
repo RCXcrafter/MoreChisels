@@ -52,6 +52,7 @@ public class ConfigHandler {
     public static boolean chiselSoapEnabled;
     public static boolean chiselPneumaticEnabled;
     public static boolean chiselElectricEnabled;
+    public static boolean chiselDarksteelEnabled;
     public static String[] oredictChiselWhitelist;
     private static String[] oredictChiselWhitelistDefaults = {
     		//vanilla
@@ -129,6 +130,7 @@ public class ConfigHandler {
     public static int durabilitySoap;
     public static int durabilityPneumatic;
     public static int durabilityElectric;
+    public static int durabilityDarksteel;
 
     public static boolean enableLogging;
     public static int lifeEssencePerRepair;
@@ -187,6 +189,7 @@ public class ConfigHandler {
         chiselSoapEnabled = config.getBoolean("chiselSoapEnabled", chisels, true, "");
         chiselPneumaticEnabled = config.getBoolean("chiselPneumaticEnabled", chisels, true, "");
         chiselElectricEnabled = config.getBoolean("chiselElectricEnabled", chisels, true, "");
+        chiselDarksteelEnabled = config.getBoolean("chiselElectricDarksteel", chisels, true, "");
         oredictChiselWhitelist = config.getStringList("oredictChiselWhitelist", chisels, oredictChiselWhitelistDefaults, "Whitelist for chisels created by Oredict entries. Add the OreDict name.\nSyntax is:\nOredictName:Durability:HexColor");
 
         // DURABILITY
@@ -222,6 +225,7 @@ public class ConfigHandler {
         durabilitySoap = config.getInt("durabilitySoap", durability, 10, 0, Short.MAX_VALUE, "");
         durabilityPneumatic = config.getInt("durabilityPneumatic", durability, 150, 0, Short.MAX_VALUE, "");
         durabilityElectric = config.getInt("durabilityElectric", durability, 200, 0, Short.MAX_VALUE, "");
+        durabilityDarksteel = config.getInt("durabilityDarksteel", durability, 1561, 0, Short.MAX_VALUE, "");
 
         enableLogging = config.getBoolean("enableLogging", misc, true, "Allows MoreChisels to log things to console. This must be enabled when submitting a log for support.");
         addCoolStuffForCoolPeople = config.getBoolean("addCoolStuffForCoolPeople", misc, true, "Disable this if you don't like cool people.");

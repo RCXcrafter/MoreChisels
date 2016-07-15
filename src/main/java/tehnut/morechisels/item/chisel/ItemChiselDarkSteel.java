@@ -1,5 +1,6 @@
 package tehnut.morechisels.item.chisel;
 
+import java.awt.Color;
 import java.util.List;
 
 import com.cricketcraft.chisel.api.carving.ICarvingVariation;
@@ -12,11 +13,15 @@ import crazypants.enderio.EnderIO;
 import crazypants.enderio.config.Config;
 import crazypants.enderio.item.darksteel.DarkSteelRecipeManager;
 import crazypants.enderio.item.darksteel.IDarkSteelItem;
+import crazypants.enderio.item.darksteel.PoweredItemRenderer;
 import crazypants.enderio.item.darksteel.upgrade.EnergyUpgrade;
 import crazypants.enderio.machine.power.PowerDisplayUtil;
 
 import com.enderio.core.api.client.gui.IAdvancedTooltipProvider;
+import com.enderio.core.client.render.ColorUtil;
+import com.enderio.core.client.render.RenderUtil;
 import com.enderio.core.common.util.ItemUtil;
+import com.enderio.core.common.vecmath.Vector4f;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
@@ -32,23 +37,24 @@ import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
+import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.common.MinecraftForge;
 import pneumaticCraft.api.item.IPressurizable;
 import tehnut.morechisels.ModInformation;
 import tehnut.morechisels.item.ChiselType;
 import tehnut.morechisels.item.ItemChiselBase;
 
-public class ItemChiselDarkSteel extends ItemChiselBase implements IEnergyContainerItem, IAdvancedTooltipProvider, IDarkSteelItem{
-    
-	public ItemChiselDarkSteel() {
-        super(ChiselType.FLUXED);
+import static tehnut.morechisels.compat.CompatibilityEnderIO.chiselDarksteel;
 
+public class ItemChiselDarksteel extends ItemChiselBase implements IEnergyContainerItem, IAdvancedTooltipProvider, IDarkSteelItem{
+
+	public ItemChiselDarksteel() {
+        super(ChiselType.DARKSTEEL);
         setNoRepair();
-        setMaxDamage(0);
     }
 
-	  public static ItemChiselDarkSteel create() {
-	    ItemChiselDarkSteel res = new ItemChiselDarkSteel();
+	  public static ItemChiselDarksteel create() {
+	    ItemChiselDarksteel res = new ItemChiselDarksteel();
 	    res.init();
 	    MinecraftForge.EVENT_BUS.register(res);
 	    return res;
@@ -148,13 +154,4 @@ public class ItemChiselDarkSteel extends ItemChiselBase implements IEnergyContai
 	    }
 	    DarkSteelRecipeManager.instance.addAdvancedTooltipEntries(itemstack, entityplayer, list, flag);
 	  }
-
-	  public ItemStack createItemStack() {
-	    return new ItemStack(this);
-	  }
-
-	  //@Override
-	  //public void extractInternal(ItemStack equipped, int power) {
-	  //  extractEnergy(equipped, power, false);
-	  //}
 }
