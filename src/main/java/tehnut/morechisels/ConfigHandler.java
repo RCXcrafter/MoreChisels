@@ -53,6 +53,10 @@ public class ConfigHandler {
     public static boolean chiselPneumaticEnabled;
     public static boolean chiselElectricEnabled;
     public static boolean chiselDarksteelEnabled;
+    public static boolean chiselGhostwoodEnabled;
+    public static boolean chiselBloodwoodEnabled;
+    public static boolean chiselDarkwoodEnabled;
+    public static boolean chiselFusewoodEnabled;
     public static String[] oredictChiselWhitelist;
     private static String[] oredictChiselWhitelistDefaults = {
     		//vanilla
@@ -131,6 +135,10 @@ public class ConfigHandler {
     public static int durabilityPneumatic;
     public static int durabilityElectric;
     public static int durabilityDarksteel;
+    public static int durabilityGhostwood;
+    public static int durabilityBloodwood;
+    public static int durabilityDarkwood;
+    public static int durabilityFusewood;
 
     public static boolean enableLogging;
     public static int lifeEssencePerRepair;
@@ -189,7 +197,11 @@ public class ConfigHandler {
         chiselSoapEnabled = config.getBoolean("chiselSoapEnabled", chisels, true, "");
         chiselPneumaticEnabled = config.getBoolean("chiselPneumaticEnabled", chisels, true, "");
         chiselElectricEnabled = config.getBoolean("chiselElectricEnabled", chisels, true, "");
-        chiselDarksteelEnabled = config.getBoolean("chiselElectricDarksteel", chisels, true, "");
+        chiselDarksteelEnabled = config.getBoolean("chiselDarksteelEnabled", chisels, true, "");
+        chiselGhostwoodEnabled = config.getBoolean("chiselGhostwoodEnabled", chisels, true, "");
+        chiselBloodwoodEnabled = config.getBoolean("chiselBloodwoodEnabled", chisels, true, "");
+        chiselDarkwoodEnabled = config.getBoolean("chiselDarkwoodEnabled", chisels, true, "");
+        chiselFusewoodEnabled = config.getBoolean("chiselFusewoodEnabled", chisels, true, "");
         oredictChiselWhitelist = config.getStringList("oredictChiselWhitelist", chisels, oredictChiselWhitelistDefaults, "Whitelist for chisels created by Oredict entries. Add the OreDict name.\nSyntax is:\nOredictName:Durability:HexColor");
 
         // DURABILITY
@@ -226,6 +238,10 @@ public class ConfigHandler {
         durabilityPneumatic = config.getInt("durabilityPneumatic", durability, 150, 0, Short.MAX_VALUE, "");
         durabilityElectric = config.getInt("durabilityElectric", durability, 200, 0, Short.MAX_VALUE, "");
         durabilityDarksteel = config.getInt("durabilityDarksteel", durability, 1561, 0, Short.MAX_VALUE, "");
+        durabilityGhostwood = config.getInt("durabilityGhostwood", durability, 59, 0, Short.MAX_VALUE, "");
+        durabilityBloodwood = config.getInt("durabilityBloodwood", durability, 350, 0, Short.MAX_VALUE, "");
+        durabilityDarkwood = config.getInt("durabilityDarkwood", durability, 131, 0, Short.MAX_VALUE, "");
+        durabilityFusewood = config.getInt("durabilityFusewood", durability, 250, 0, Short.MAX_VALUE, "");
 
         enableLogging = config.getBoolean("enableLogging", misc, true, "Allows MoreChisels to log things to console. This must be enabled when submitting a log for support.");
         addCoolStuffForCoolPeople = config.getBoolean("addCoolStuffForCoolPeople", misc, true, "Disable this if you don't like cool people.");

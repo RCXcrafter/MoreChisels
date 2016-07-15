@@ -11,14 +11,17 @@ import tehnut.morechisels.registry.RecipeRegistry;
 import tehnut.morechisels.registry.ItemRegistry;
 import tehnut.morechisels.util.LogHelper;
 
-import static tehnut.morechisels.ConfigHandler.*;
+import static tehnut.morechisels.ConfigHandler.chiselGhostwoodEnabled;
+import static tehnut.morechisels.ConfigHandler.chiselBloodwoodEnabled;
+import static tehnut.morechisels.ConfigHandler.chiselDarkwoodEnabled;
+import static tehnut.morechisels.ConfigHandler.chiselFusewoodEnabled;
 
 public class CompatibilityNatura {
 
-    public static Item chiselGhostwood;59
-    public static Item chiselBloodwood;350
-    public static Item chiselDarkwood;131
-    public static Item chiselFusewood;250
+    public static Item chiselGhostwood;
+    public static Item chiselBloodwood;
+    public static Item chiselDarkwood;
+    public static Item chiselFusewood;
 
     static {
         LogHelper.info("Natura compatibility is enabled and running");

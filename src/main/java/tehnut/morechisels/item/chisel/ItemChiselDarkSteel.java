@@ -154,4 +154,8 @@ public class ItemChiselDarksteel extends ItemChiselBase implements IEnergyContai
 	    }
 	    DarkSteelRecipeManager.instance.addAdvancedTooltipEntries(itemstack, entityplayer, list, flag);
 	  }
+
+	  public ItemStack createItemStack() {
+	    return new ItemStack(this);
+	  }
 }

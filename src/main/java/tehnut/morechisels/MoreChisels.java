@@ -66,6 +66,7 @@ public class MoreChisels {
         Utils.registerCompat(CompatibilityPneumatiCraft.class, "PneumaticCraft");
         Utils.registerCompat(CompatibilityIC2.class, "IC2");
         Utils.registerCompat(CompatibilityEnderIO.class, "EnderIO");
+        Utils.registerCompat(CompatibilityNatura.class, "Natura");
         try {
         	 Class.forName( "cofh.api.package-info" );
              try {

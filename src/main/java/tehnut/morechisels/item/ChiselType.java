@@ -27,7 +27,8 @@ public enum ChiselType {
     SOAP(durabilitySoap), // MrCrayfish' Furniture Mod
     PNEUMATIC(durabilityPneumatic), // PneumaticCraft
     ELECTRIC(durabilityElectric), // IC2
-    DARKSTEEL(durabilityDarksteel); // Ender IO
+    DARKSTEEL(durabilityDarksteel), // Ender IO
+    GHOSTWOOD(durabilityGhostwood), BLOODWOOD(durabilityBloodwood), DARKWOOD(durabilityDarkwood), FUSEWOOD(durabilityFusewood); // Natura
 
     /**
      * Used for all types of durability (RF, EU, etc)
