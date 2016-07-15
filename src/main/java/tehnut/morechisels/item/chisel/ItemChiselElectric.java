@@ -70,6 +70,11 @@ public class ItemChiselElectric extends ItemChiselBase implements IElectricItem{
     }
 
     @Override
+    public boolean hasModes(ItemStack chisel) {
+        return true;
+    }
+
+    @Override
     public boolean canChisel(World world, ItemStack chisel, ICarvingVariation target) {
         return chisel.getItemDamage() < 26;
     }
