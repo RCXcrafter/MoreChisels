@@ -32,6 +32,6 @@ public class CompatibilityPneumatiCraft {
     private static void registerRecipes() {
         Item airCanister =GameRegistry.findItem("PneumaticCraft", "airCanister");
         int airCanisterMeta = 30000;
-        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(chiselPneumatic, 1, durabilityPneumatic), " I", "S ", 'I', "ingotIronCompressed", 'S', new ItemStack(airCanister, 1, airCanisterMeta)));
+        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(chiselPneumatic, 1, durabilityPneumatic * 100), " I", "S ", 'I', "ingotIronCompressed", 'S', new ItemStack(airCanister, 1, airCanisterMeta)));
     }
 }

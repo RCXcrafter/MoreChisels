@@ -27,6 +27,10 @@ public class ItemChiselPneumatic extends ItemChiselBase implements IPressurizabl
     
 	public ItemChiselPneumatic() {
         super(ChiselType.PNEUMATIC);
+        boolean canChiselBlock = true;
+        boolean hasModes = true;
+        setNoRepair();
+        setMaxDamage(ChiselType.PNEUMATIC.durability * 100);
         this.volume = 1500;
     }
 

@@ -32,6 +32,6 @@ public class CompatibilityIC2 {
         Item powerUnit =GameRegistry.findItem("IC2", "itemRecipePart");
         int powerUnitMeta = 3;
         
-        GameRegistry.addShapelessRecipe(new ItemStack(chiselElectric, 1, 0), chisel, new ItemStack(powerUnit, 1, powerUnitMeta));
+        GameRegistry.addShapelessRecipe(new ItemStack(chiselElectric, 1, 26), chisel, new ItemStack(powerUnit, 1, powerUnitMeta));
     }
 }

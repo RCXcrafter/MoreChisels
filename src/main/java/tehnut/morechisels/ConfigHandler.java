@@ -220,8 +220,8 @@ public class ConfigHandler {
         durabilityCardboard = config.getInt("durabilityCardboard", durability, 64, 0, Short.MAX_VALUE, "");
         //durabilityPrecision = config.getInt("durabilityPrecision", durability, 64, 0, Short.MAX_VALUE, "");
         durabilitySoap = config.getInt("durabilitySoap", durability, 10, 0, Short.MAX_VALUE, "");
-        durabilityPneumatic = config.getInt("durabilityPneumatic", durability, 30000, 0, Short.MAX_VALUE, "");
-        durabilityElectric = config.getInt("durabilityElectric", durability, 500, 0, Short.MAX_VALUE, "");
+        durabilityPneumatic = config.getInt("durabilityPneumatic", durability, 150, 0, Short.MAX_VALUE, "");
+        durabilityElectric = config.getInt("durabilityElectric", durability, 200, 0, Short.MAX_VALUE, "");
 
         enableLogging = config.getBoolean("enableLogging", misc, true, "Allows MoreChisels to log things to console. This must be enabled when submitting a log for support.");
         addCoolStuffForCoolPeople = config.getBoolean("addCoolStuffForCoolPeople", misc, true, "Disable this if you don't like cool people.");

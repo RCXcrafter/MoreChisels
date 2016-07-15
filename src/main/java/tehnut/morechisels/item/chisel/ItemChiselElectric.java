@@ -16,7 +16,6 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
@@ -25,12 +24,12 @@ import tehnut.morechisels.item.ChiselType;
 import tehnut.morechisels.item.ItemChiselBase;
 
 public class ItemChiselElectric extends ItemChiselBase implements IElectricItem{
-
-	private final int volume;
     
 	public ItemChiselElectric() {
         super(ChiselType.ELECTRIC);
-        this.volume = 1500;
+        boolean canChiselBlock = true;
+        boolean hasModes = true;
+        setNoRepair();
         setMaxDamage(27);
     }
 
@@ -51,7 +50,7 @@ public class ItemChiselElectric extends ItemChiselBase implements IElectricItem{
 
 	@Override
 	public double getMaxCharge(ItemStack itemStack) {
-		return 10000;
+		return ChiselType.ELECTRIC.durability * 50;
 	}
 
 	@Override
@@ -66,7 +65,7 @@ public class ItemChiselElectric extends ItemChiselBase implements IElectricItem{
     
     @Override
     public boolean onChisel(World world, ItemStack chisel, ICarvingVariation target) {
-    	ElectricItem.manager.discharge(chisel, 5, 1, true, false, false);
+    	ElectricItem.manager.discharge(chisel, 50, 1, true, false, false);
         return false;
     }
 
