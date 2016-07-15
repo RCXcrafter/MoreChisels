@@ -40,6 +40,10 @@ item.morechisels.chisel.soap.name=Soap Chisel
 item.morechisels.chisel.pneumatic.name=Pneumatic Chisel
 item.morechisels.chisel.electric.name=Electric Chisel
 item.morechisels.chisel.darksteel.name=Dark Chisel
+item.morechisels.chisel.ghostwood.name=Ghostwood Chisel
+item.morechisels.chisel.bloodwood.name=Bloodwood Chisel
+item.morechisels.chisel.darkwood.name=Darkwood Chisel
+item.morechisels.chisel.fusewood.name=Fusewood Chisel
 item.morechisels.chisel.oredict.name=%s Chisel
 
 # Materials
