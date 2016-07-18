@@ -28,8 +28,9 @@ public enum ChiselType {
     PNEUMATIC(durabilityPneumatic), // PneumaticCraft
     ELECTRIC(durabilityElectric), // IC2
     DARKSTEEL(durabilityDarksteel), // Ender IO
-    GHOSTWOOD(durabilityGhostwood), BLOODWOOD(durabilityBloodwood), DARKWOOD(durabilityDarkwood), FUSEWOOD(durabilityFusewood); // Natura
-
+    GHOSTWOOD(durabilityGhostwood), BLOODWOOD(durabilityBloodwood), DARKWOOD(durabilityDarkwood), FUSEWOOD(durabilityFusewood), // Natura
+    ICHORIUM(0); // Thaumic Tinkerer
+    
     /**
      * Used for all types of durability (RF, EU, etc)
      */

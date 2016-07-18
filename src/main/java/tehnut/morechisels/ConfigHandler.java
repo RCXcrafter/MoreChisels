@@ -57,6 +57,7 @@ public class ConfigHandler {
     public static boolean chiselBloodwoodEnabled;
     public static boolean chiselDarkwoodEnabled;
     public static boolean chiselFusewoodEnabled;
+    public static boolean chiselIchoriumEnabled;
     public static String[] oredictChiselWhitelist;
     private static String[] oredictChiselWhitelistDefaults = {
     		//vanilla
@@ -202,6 +203,7 @@ public class ConfigHandler {
         chiselBloodwoodEnabled = config.getBoolean("chiselBloodwoodEnabled", chisels, true, "");
         chiselDarkwoodEnabled = config.getBoolean("chiselDarkwoodEnabled", chisels, true, "");
         chiselFusewoodEnabled = config.getBoolean("chiselFusewoodEnabled", chisels, true, "");
+        chiselIchoriumEnabled = config.getBoolean("chiselIchoriumEnabled", chisels, true, "");
         oredictChiselWhitelist = config.getStringList("oredictChiselWhitelist", chisels, oredictChiselWhitelistDefaults, "Whitelist for chisels created by Oredict entries. Add the OreDict name.\nSyntax is:\nOredictName:Durability:HexColor");
 
         // DURABILITY

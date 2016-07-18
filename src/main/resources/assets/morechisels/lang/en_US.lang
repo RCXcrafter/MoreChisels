@@ -44,6 +44,8 @@ item.morechisels.chisel.ghostwood.name=Ghostwood Chisel
 item.morechisels.chisel.bloodwood.name=Bloodwood Chisel
 item.morechisels.chisel.darkwood.name=Darkwood Chisel
 item.morechisels.chisel.fusewood.name=Fusewood Chisel
+item.morechisels.chisel.ichorium.name=Ichorium Chisel
+item.morechisels.chisel.ichoriumawakened.name=Awakened Ichorium Chisel
 item.morechisels.chisel.oredict.name=%s Chisel
 
 # Materials
