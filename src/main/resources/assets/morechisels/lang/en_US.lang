@@ -46,6 +46,9 @@ item.morechisels.chisel.darkwood.name=Darkwood Chisel
 item.morechisels.chisel.fusewood.name=Fusewood Chisel
 item.morechisels.chisel.ichorium.name=Ichorium Chisel
 item.morechisels.chisel.ichoriumawakened.name=Awakened Ichorium Chisel
+item.morechisels.chisel.zircon.name=Zircon Chisel
+item.morechisels.chisel.eudialyte.name=Eudialyte Chisel
+item.morechisels.chisel.zirconium.name=Zirconium Chisel
 item.morechisels.chisel.oredict.name=%s Chisel
 
 # Materials

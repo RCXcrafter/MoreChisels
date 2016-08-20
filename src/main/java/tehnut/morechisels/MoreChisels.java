@@ -68,6 +68,7 @@ public class MoreChisels {
         Utils.registerCompat(CompatibilityEnderIO.class, "EnderIO");
         Utils.registerCompat(CompatibilityNatura.class, "Natura");
         Utils.registerCompat(CompatibilityThaumicTinkerer.class, "IC2");
+        Utils.registerCompat(CompatibilityTropicraft.class, "tropicraft");
         try {
         	 Class.forName( "cofh.api.package-info" );
              try {

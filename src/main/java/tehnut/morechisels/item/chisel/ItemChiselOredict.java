@@ -1,12 +1,16 @@
 package tehnut.morechisels.item.chisel;
 
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.client.renderer.texture.TextureAtlasSprite;
+import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.StatCollector;
+import net.minecraftforge.client.event.TextureStitchEvent;
 import tehnut.morechisels.ModInformation;
 import tehnut.morechisels.item.ItemChiselBase;
 import tehnut.morechisels.registry.RecipeRegistry;
@@ -16,34 +20,63 @@ import java.awt.*;
 
 public class ItemChiselOredict extends ItemChiselBase {
 
-    private boolean setDisplayName;
-    private String name;
-    private String hexColor;
-
-    private IIcon overlayIcon;
-
-    public ItemChiselOredict(String name, int durability, String hexColor, boolean setDisplayName) {
+    boolean setDisplayName;
+    boolean slumdank;
+    String name;
+    String hexColor;
+    IIcon overlayIcon;
+    static TextureMap textureMap= null;
+    
+	public ItemChiselOredict(String name, int durability, String hexColor, boolean setDisplayName) {
         super(name, durability);
 
+        if (textureMap==null)
+        	textureMap= new TextureMap(1, ModInformation.ID);
+        
         this.setDisplayName = setDisplayName;
         this.name = name;
         this.hexColor = hexColor;
 
         GameRegistry.registerItem(this, "ItemChiselOredict" + name);
-        RecipeRegistry.addConfiguredChiselRecipe(this, name, true);
+        RecipeRegistry.addConfiguredChiselRecipe(this, name, true);  
     }
 
+    @SubscribeEvent
+    @SideOnly(Side.CLIENT)
+    public void textureStitch(TextureStitchEvent.Pre event) {
+        TextureMap textureMap = event.map;
+
+                // name of custom icon ( must equal getIconName() )
+                String neam = ModInformation.TEXLOC + "chisel_" + name.toLowerCase();
+                // see if there's already an icon of that name
+                TextureAtlasSprite texture = textureMap.getTextureExtry(neam);
+                if (texture == null) {
+                    // if not create one and put it in the register
+                    slumdank = true;
+                }
+                else slumdank = false;
+    }
+    
     @SideOnly(Side.CLIENT)
     public void registerIcons(IIconRegister iconRegister) {
-    	//if (iconRegister.registerIcon(ModInformation.TEXLOC + "chisel_" + name.toLowerCase()) != null){
-    	//	this.itemIcon = iconRegister.registerIcon(ModInformation.TEXLOC + "chisel_" + name.toLowerCase());
-    	//	this.overlayIcon = iconRegister.registerIcon(ModInformation.TEXLOC + "void");
-    	//}
-    	//else{
+    	
+    	TextureAtlasSprite sprite= textureMap.getTextureExtry(ModInformation.TEXLOC + "chisel_" + name.toLowerCase());
+    	
+    	System.out.println("chisel_" + name.toLowerCase());
+    	
+        if (slumdank = true){
     		this.itemIcon = iconRegister.registerIcon(ModInformation.TEXLOC + "chisel_base");
     		this.overlayIcon = iconRegister.registerIcon(ModInformation.TEXLOC + "chisel_overlay");
-    	//}
+    	}
+    	else{
+        	System.out.println("sprite=" + sprite);
+    		this.itemIcon = iconRegister.registerIcon(ModInformation.TEXLOC + "chisel_" + name.toLowerCase());
+    		this.overlayIcon = iconRegister.registerIcon(ModInformation.TEXLOC + "void");
+    	}
+    	
     }
+    
+    
 
     @SideOnly(Side.CLIENT)
     @Override

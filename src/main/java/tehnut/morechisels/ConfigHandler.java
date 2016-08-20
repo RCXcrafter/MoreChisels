@@ -58,6 +58,9 @@ public class ConfigHandler {
     public static boolean chiselDarkwoodEnabled;
     public static boolean chiselFusewoodEnabled;
     public static boolean chiselIchoriumEnabled;
+    public static boolean chiselZirconEnabled;
+    public static boolean chiselEudialyteEnabled;
+    public static boolean chiselZirconiumEnabled;
     public static String[] oredictChiselWhitelist;
     private static String[] oredictChiselWhitelistDefaults = {
     		//vanilla
@@ -140,6 +143,9 @@ public class ConfigHandler {
     public static int durabilityBloodwood;
     public static int durabilityDarkwood;
     public static int durabilityFusewood;
+    public static int durabilityZircon;
+    public static int durabilityEudialyte;
+    public static int durabilityZirconium;
 
     public static boolean enableLogging;
     public static int lifeEssencePerRepair;
@@ -204,6 +210,9 @@ public class ConfigHandler {
         chiselDarkwoodEnabled = config.getBoolean("chiselDarkwoodEnabled", chisels, true, "");
         chiselFusewoodEnabled = config.getBoolean("chiselFusewoodEnabled", chisels, true, "");
         chiselIchoriumEnabled = config.getBoolean("chiselIchoriumEnabled", chisels, true, "");
+        chiselZirconEnabled = config.getBoolean("chiselZirconEnabled", chisels, true, "");
+        chiselEudialyteEnabled = config.getBoolean("chiselEudialyteEnabled", chisels, true, "");
+        chiselZirconiumEnabled = config.getBoolean("chiselZirconiumEnabled", chisels, true, "");
         oredictChiselWhitelist = config.getStringList("oredictChiselWhitelist", chisels, oredictChiselWhitelistDefaults, "Whitelist for chisels created by Oredict entries. Add the OreDict name.\nSyntax is:\nOredictName:Durability:HexColor");
 
         // DURABILITY
@@ -244,6 +253,9 @@ public class ConfigHandler {
         durabilityBloodwood = config.getInt("durabilityBloodwood", durability, 350, 0, Short.MAX_VALUE, "");
         durabilityDarkwood = config.getInt("durabilityDarkwood", durability, 131, 0, Short.MAX_VALUE, "");
         durabilityFusewood = config.getInt("durabilityFusewood", durability, 250, 0, Short.MAX_VALUE, "");
+        durabilityZircon = config.getInt("durabilityZircon", durability, 500, 0, Short.MAX_VALUE, "");
+        durabilityEudialyte = config.getInt("durabilityEudialyte", durability, 750, 0, Short.MAX_VALUE, "");
+        durabilityZirconium = config.getInt("durabilityZirconium", durability, 1800, 0, Short.MAX_VALUE, "");
 
         enableLogging = config.getBoolean("enableLogging", misc, true, "Allows MoreChisels to log things to console. This must be enabled when submitting a log for support.");
         addCoolStuffForCoolPeople = config.getBoolean("addCoolStuffForCoolPeople", misc, true, "Disable this if you don't like cool people.");
